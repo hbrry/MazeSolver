@@ -2,7 +2,7 @@ from tkinter import Tk, BOTH, Canvas
 from turtle import width
 
 class Window:
-    def __init__(self, width, height):
+    def __init__(self, width, height, bg_color="white"):
         self.width = width
         self.height = height
         self.root = Tk()
