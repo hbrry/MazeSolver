@@ -1,4 +1,5 @@
 from graphics import *
+from cell import Cell
 
 def main():
     win = Window(800, 600)
