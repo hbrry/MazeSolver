@@ -1,4 +1,5 @@
 from tkinter import Tk, BOTH, Canvas
+from turtle import width
 
 class Window:
     def __init__(self, width, height):
@@ -21,4 +22,21 @@ class Window:
             self.redraw()
 
     def close(self):
-        self.running = False    
+        self.running = False 
+
+    def draw_line(self, Line, fill_color="black"):
+        Line.draw(self.canvas, fill_color)
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+class Line:
+    def __init__(self, x1, y1, x2, y2):
+        self.start = Point(x1, y1)
+        self.end = Point(x2, y2)
+
+    def draw(self, canvas, fill_color="black"):
+        canvas.create_line(self.start.x, self.start.y, self.end.x, self.end.y, fill=fill_color, width=2)
